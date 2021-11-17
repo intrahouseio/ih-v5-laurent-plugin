@@ -1,0 +1,31 @@
+{
+  "grid": [
+    { "id": "p2", "xs": 6, "class": "main", "table": "devhard" },
+    { "id": "p4", "xs": 6, "class": "main", "table": "devhard", "hide": "!data.p2.w" }
+  ],
+  "spacing": 4,
+
+  "p2": [
+    { "prop": "chan", "title": "Channel ID", "type": "text" },
+    { "prop": "devpropname", "title": "$Devpropname", "type": "input" },
+    { "prop": "r", "title": "", "type": "text", "hide": "1==1" },
+    { "prop": "w", "title": "", "type": "text", "hide": "1==1" },
+
+    { "prop": "calc", "title": "$Devhard_Calc", "type": "input" }
+  ],
+  "p4": [
+    { "prop": "w_header", "title": "Запись", "type": "header" },
+    { "prop": "calc_out", "title": "$Devhard_Calc_Out", "type": "input" },
+
+    { "prop": "header_testwrite", "title": "Тест записи", "type": "header" },
+    { "prop": "testValue", "title": "Значение для записи", "type": "input" },
+
+    {
+      "prop": "writeButton",
+      "title": "$doWrite",
+      "type": "button",
+      "command": "writetochannel",
+      "param": "write"
+    }
+  ]
+}

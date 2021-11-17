@@ -1,0 +1,50 @@
+{
+  "grid": [
+    { "id": "p1", "xs": 4, "class": "main", "table": "units" },
+    { "id": "p2", "xs": 4, "class": "main", "table": "units" },
+    { "id": "p3", "xs": 4, "class": "main", "table": "units" },
+    { "id": "p9", "xs": 12, "class": "main", "table": "unitsTreeTable", "height": "fill" }
+  ],
+
+  "spacing": 10,
+
+  "p1": [
+   
+   
+    { "prop": "host", "title": "IP контроллера", "type": "input", "default": "192.168.0.101" },
+    { "prop": "port", "title": "Порт контроллера", "type": "input", "default": "2424" },
+    { "prop": "pwd", "title": "Пароль", "type": "password", "default": "Laurent" }
+  ],
+  "p2": [
+    { "prop": "setevton", "title": "Система 'Сторож' для дискретных входов (EVT)", "type": "cb", "default": 1 },
+    { "prop": "setdaton", "title": "Сводные данные от контроллера каждую сек (DAT)", "type": "cb", "default": 1 },
+    { "prop": "setdzgon", "title": "Подавление дребезга для дискретных входов (DZG)", "type": "cb", "default": 1 }
+  ],
+
+  "p3": [
+    {
+      "prop": "restarttime",
+      "title": "$Unit_Restarttime",
+      "type": "number",
+      "default": 5
+    },
+    { "prop": "loglevel", "title": "$LogLevel", "type": "droplist", "data": "loglevelList" }
+  ],
+
+  "p9": [
+    {
+      "title": "",
+      "type": "table",
+      "prop": "unitsTreeTable",
+
+      "columns": [
+        { "prop": "name", "title": "ID", "type": "text", "width": 150 },
+        { "prop": "state", "title": "Состояние", "type": "text", "width": 150 },
+        { "prop": "laststart", "title": "Время запуска", "type": "text", "width": 150 },
+        { "prop": "laststop", "title": "Время останова", "type": "text", "width": 150 },
+        { "prop": "uptime", "title": "Uptime", "type": "text", "width": 150 },
+        { "prop": "error", "title": "Ошибка", "type": "text", "width": 250 }
+      ]
+    }
+  ]
+}
