@@ -1,7 +1,8 @@
 {
   "grid": [
     { "id": "p2", "xs": 6, "class": "main", "table": "devhard" },
-    { "id": "p4", "xs": 6, "class": "main", "table": "devhard", "hide": "!data.p2.w" }
+    { "id": "p4", "xs": 6, "class": "main", "table": "devhard", "hide": "!data.p2.w" },
+    { "id": "p9", "xs": 12, "class": "main", "table": "onechannelrtTable" }
   ],
   "spacing": 4,
 
@@ -27,5 +28,9 @@
       "command": "writetochannel",
       "param": "write"
     }
+  ],
+  "p9": [
+    { "prop": "realtime_chan_str", "title": "Канал", "type": "text"},
+    { "prop": "realtime_dev_str", "title": "Устройство", "type": "text"}
   ]
 }
