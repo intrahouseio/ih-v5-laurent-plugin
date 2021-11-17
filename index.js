@@ -55,9 +55,9 @@ function laurentChannels() {
     { id: 'ADC_1', desc: 'ADC', order: 35, r:1 },
     { id: 'ADC_2', desc: 'ADC', order: 36, r:1 },
     { id: 'TMP', desc: 'TMP', order: 37, r:1 },
-    { id: 'IMPL_1', desc: 'IMPL', order: 41, r:1, w:1 },
-    { id: 'IMPL_2', desc: 'IMPL', order: 42, r:1, w:1 },
-    { id: 'IMPL_3', desc: 'IMPL', order: 43, r:1, w:1 },
-    { id: 'IMPL_4', desc: 'IMPL', order: 44, r:1, w:1 }
+    { id: 'IMPL_1', desc: 'IMPL', order: 41, r:1 },
+    { id: 'IMPL_2', desc: 'IMPL', order: 42, r:1 },
+    { id: 'IMPL_3', desc: 'IMPL', order: 43, r:1 },
+    { id: 'IMPL_4', desc: 'IMPL', order: 44, r:1 }
   ];
 }
