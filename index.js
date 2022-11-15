@@ -4,13 +4,19 @@
 
 const util = require('util');
 
-const plugin = require('ih-plugin-api')();
+// const plugin = require('ih-plugin-api')();
 const app = require('./app');
 
 (async () => {
-  plugin.log('Laurent plugin has started.', 0);
-  plugin.jerome = 0;
+ 
+  let plugin;
   try {
+    const opt = getOptFromArgs();
+    const pluginapi = opt && opt.pluginapi ? opt.pluginapi : 'ih-plugin-api';
+    plugin = require(pluginapi+'/index.js')();
+    
+    plugin.log('Laurent plugin has started.', 0);
+    plugin.jerome = 0;
     // Получить каналы для подписки
     // plugin.channels = await plugin.channels.get();
     // plugin.log('Received channels...');
@@ -60,4 +66,15 @@ function laurentChannels() {
     { id: 'IMPL_3', desc: 'IMPL', order: 43, r:1 },
     { id: 'IMPL_4', desc: 'IMPL', order: 44, r:1 }
   ];
+}
+
+
+function getOptFromArgs() {
+  let opt;
+  try {
+    opt = JSON.parse(process.argv[2]); //
+  } catch (e) {
+    opt = {};
+  }
+  return opt;
 }
